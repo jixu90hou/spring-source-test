@@ -23,6 +23,7 @@ public class SpringSampleTest {
                 new ClassPathXmlApplicationContext(new String[]{"bean.xml"});
         HelloService helloService= (HelloService) ctx.getBean("helloService");
         helloService.printHello();
+        helloService.say("zhang");
     }
 /*
     public static <T> T proxy(Object obj) {
