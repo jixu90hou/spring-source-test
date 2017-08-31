@@ -1,7 +1,11 @@
 package org.weweb;
 
+import org.springframework.beans.factory.BeanFactory;
+import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.io.FileSystemResource;
+import org.weweb.service.DemoService;
 import org.weweb.service.HelloService;
 
 import java.io.IOException;
@@ -11,7 +15,7 @@ import java.io.IOException;
  */
 public class SpringSampleTest {
     public static void main(String[] args) throws ClassNotFoundException, IOException {
-      /*  String filePath=ClassLoader.getSystemClassLoader().getResource("bean.xml").getPath();
+/*        String filePath=ClassLoader.getSystemClassLoader().getResource("bean.xml").getPath();
         BeanFactory beanFactory=new XmlBeanFactory(new FileSystemResource(filePath));
         HelloService helloService= (HelloService) beanFactory.getBean("helloService");
         DemoService demoService= (DemoService) beanFactory.getBean("demoService");
