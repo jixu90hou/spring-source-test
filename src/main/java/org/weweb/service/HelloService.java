@@ -16,9 +16,9 @@ public class HelloService {
         System.out.println("==============");
     }
 
-  /*  public HelloService(DemoService demoService) {
+   public HelloService(DemoService demoService) {
         this.demoService = demoService;
-    }*/
+    }
 
     public void say(String info){
         System.out.println("Hello:"+info);

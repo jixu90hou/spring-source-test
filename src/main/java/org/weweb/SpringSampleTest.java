@@ -1,11 +1,8 @@
 package org.weweb;
 
-import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.xml.XmlBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
-import org.springframework.core.io.FileSystemResource;
-import org.weweb.service.DemoService;
+import org.weweb.customtag.User;
 import org.weweb.service.HelloService;
 
 import java.io.IOException;
@@ -28,6 +25,9 @@ public class SpringSampleTest {
         HelloService helloService= (HelloService) ctx.getBean("helloService");
         helloService.printHello();
         helloService.say("zhang");
+
+        User user= (User) ctx.getBean("testBean");
+        System.out.println(user);
     }
 /*
     public static <T> T proxy(Object obj) {
